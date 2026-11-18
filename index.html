@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Fun Site</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 40px;
+           background: linear-gradient(135deg, #6a11cb, #2575fc); color: white; }
+    button { font-size: 1.2rem; padding: 12px 24px; border: none;
+             border-radius: 12px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to my site 🎉</h1>
+  <p id="msg">Tap the button!</p>
+  <button onclick="surprise()">Surprise me</button>
+  <script>
+    const msgs = ["You're awesome!", "Built it myself 😎", "Keep going!", "Nice tap!"];
+    function surprise() {
+      document.getElementById("msg").textContent =
+        msgs[Math.floor(Math.random() * msgs.length)];
+    }
+  </script>
+</body>
+</html>
